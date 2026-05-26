@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>पं. रमेश तिवारी शास्त्री – राम मंदिर, पुणे</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --saffron: #FF6B00;
+      --deep-saffron: #E05A00;
+      --gold: #D4A017;
+      --gold-light: #F5C842;
+      --crimson: #8B0000;
+      --cream: #FFF8EE;
+      --warm-white: #FFFDF5;
+      --dark: #1A0A00;
+      --text: #2C1500;
+      --muted: #7A5C3A;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── Decorative top border ── */
+    .top-border {
+      height: 8px;
+      background: repeating-linear-gradient(90deg, var(--saffron) 0px, var(--saffron) 20px, var(--gold) 20px, var(--gold) 40px, var(--crimson) 40px, var(--crimson) 60px);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      background: linear-gradient(160deg, #1A0800 0%, #3D1200 40%, #6B2200 100%);
+      overflow: hidden;
+      padding: 60px 20px 80px;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(255,107,0,0.18) 0%, transparent 70%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B00' fill-opacity='0.04'%3E%3Cpath d='M30 0L60 30L30 60L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .om-symbol {
+      font-size: 56px;
+      color: var(--gold-light);
+      display: block;
+      animation: pulse 3s ease-in-out infinite;
+      text-shadow: 0 0 30px rgba(212,160,23,0.6);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.9; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.06); }
+    }
+
+    .jai-shriram {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      color: var(--gold-light);
+      font-size: 15px;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+      opacity: 0.85;
+    }
+
+    .hero-name {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(32px, 7vw, 60px);
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 1.2;
+      text-shadow: 2px 4px 12px rgba(0,0,0,0.5);
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-subtitle {
+      display: inline-block;
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(16px, 3.5vw, 22px);
+      color: var(--gold-light);
+      margin-top: 8px;
+      border: 1px solid rgba(212,160,23,0.4);
+      padding: 4px 20px;
+      border-radius: 40px;
+      animation: fadeUp 0.9s 0.1s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 24px auto;
+    }
+
+    .hero-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--saffron);
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 12px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(255,107,0,0.4);
+      animation: fadeUp 1s 0.2s ease both;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-phone:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(255,107,0,0.55);
+    }
+
+    /* ── Mandala decorative strip ── */
+    .strip {
+      background: var(--saffron);
+      padding: 10px 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .strip-inner {
+      display: inline-flex;
+      gap: 24px;
+      white-space: nowrap;
+      animation: marquee 18s linear infinite;
+      color: white;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-family: 'Tiro Devanagari Hindi', serif;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(100vw); }
+      to { transform: translateX(-100%); }
+    }
+
+    /* ── About section ── */
+    .about {
+      max-width: 860px;
+      margin: 60px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .about { grid-template-columns: 1fr; }
+    }
+
+    .about-card {
+      background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+      border: 1px solid rgba(212,160,23,0.3);
+      border-radius: 16px;
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::before {
+      content: 'ॐ';
+      position: absolute;
+      right: -10px;
+      bottom: -20px;
+      font-size: 120px;
+      color: rgba(212,160,23,0.1);
+      font-family: 'Tiro Devanagari Hindi', serif;
+      pointer-events: none;
+    }
+
+    .about-card h2 {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 28px;
+      color: var(--crimson);
+      margin-bottom: 14px;
+    }
+
+    .about-card p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .about-address {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-box {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: white;
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--saffron);
+    }
+
+    .info-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-box h4 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .info-box p, .info-box a {
+      font-size: 16px;
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .info-box a:hover { color: var(--saffron); }
+
+    /* ── Services Section ── */
+    .services-section {
+      background: linear-gradient(180deg, #1A0800 0%, #2E0E00 100%);
+      padding: 70px 24px;
+      text-align: center;
+    }
+
+    .section-label {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 48px;
+    }
+
+    .services-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,160,23,0.2);
+      border-radius: 14px;
+      padding: 28px 22px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .service-card:hover {
+      background: rgba(255,107,0,0.12);
+      border-color: var(--saffron);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(255,107,0,0.2);
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .service-name {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 17px;
+      color: #FFE4B5;
+      line-height: 1.4;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      padding: 70px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.06'%3E%3Cpath d='M20 0L40 20L20 40L0 20z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .cta-title {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(22px, 4vw, 36px);
+      color: white;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .cta-sub {
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: var(--saffron);
+      font-size: 20px;
+      font-weight: 800;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.04);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.28);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--dark);
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+    }
+
+    footer .footer-name {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      color: var(--gold);
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .bottom-border {
+      height: 6px;
+      background: repeating-linear-gradient(90deg, var(--crimson) 0px, var(--crimson) 20px, var(--gold) 20px, var(--gold) 40px, var(--saffron) 40px, var(--saffron) 60px);
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-border"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="om-symbol">ॐ</span>
+  <p class="jai-shriram">।। जय श्रीराम ।।</p>
+  <h1 class="hero-name">पं. रमेश तिवारी शास्त्री</h1>
+  <span class="hero-subtitle">राम मंदिर, पुणे</span>
+  <div class="hero-divider"></div>
+  <a href="tel:6376139723" class="hero-phone">📞 6376139723</a>
+</section>
+
+<!-- MARQUEE -->
+<div class="strip">
+  <div class="strip-inner">
+    ✦ शुभ कार्य हेतु संपर्क करें &nbsp;&nbsp; ✦ अनुभवी पंडित जी &nbsp;&nbsp; ✦ सभी धार्मिक अनुष्ठान &nbsp;&nbsp; ✦ पुणे एवं आसपास के क्षेत्र में सेवाएं उपलब्ध &nbsp;&nbsp; ✦ राम मंदिर, अंबेगाव, कात्रज &nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- ABOUT + CONTACT -->
+<section class="about">
+  <div class="about-card">
+    <h2>हमारे बारे में</h2>
+    <p>
+      पं. रमेश तिवारी शास्त्री जी पुणे के अनुभवी एवं विद्वान पंडित हैं। वे सभी प्रकार के धार्मिक अनुष्ठान, पूजा-पाठ एवं यज्ञ विधि-विधान से सम्पन्न कराते हैं। राम मंदिर, अंबेगाव, कात्रज में स्थित उनकी सेवाएं पुणे एवं आसपास के क्षेत्रों में उपलब्ध हैं।
+    </p>
+  </div>
+
+  <div class="about-address">
+    <div class="info-box">
+      <span class="info-icon">📍</span>
+      <div>
+        <h4>पता</h4>
+        <p>अंबेगाव, कात्रज, पुणे – 411046</p>
+      </div>
+    </div>
+    <div class="info-box">
+      <span class="info-icon">📞</span>
+      <div>
+        <h4>मोबाइल</h4>
+        <a href="tel:6376139723">6376139723</a>
+      </div>
+    </div>
+    <div class="info-box">
+      <span class="info-icon">🕉️</span>
+      <div>
+        <h4>स्थान</h4>
+        <p>राम मंदिर, पुणे</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <p class="section-label">Our Services</p>
+  <h2 class="section-title">हमारी सेवाएं</h2>
+  <p class="section-sub">सभी धार्मिक अनुष्ठान हेतु संपर्क करें</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🐘</span>
+      <p class="service-name">श्री गणेश अभिषेक</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🙏</span>
+      <p class="service-name">श्री सत्यनारायण कथा</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏡</span>
+      <p class="service-name">वास्तुशांती पूजा</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔥</span>
+      <p class="service-name">नवचंडी महायज्ञ</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💒</span>
+      <p class="service-name">विवाह सुंदर कांड पाठ</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔱</span>
+      <p class="service-name">महादेव रुद्राभिषेक</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚪</span>
+      <p class="service-name">गृहप्रवेश</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">⭐</span>
+      <p class="service-name">नवग्रह शांती</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🪔</span>
+      <p class="service-name">महा मृत्युञ्जय जप</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔮</span>
+      <p class="service-name">ज्योतिष परामर्श</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="cta-title">सभी धार्मिक अनुष्ठान हेतु अभी संपर्क करें</h2>
+  <p class="cta-sub">पं. रमेश तिवारी शास्त्री जी से बात करें</p>
+  <a href="tel:6376139723" class="cta-btn">📞 6376139723</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-name">पं. रमेश तिवारी शास्त्री</p>
+  <p>अंबेगाव, कात्रज, पुणे – 411046 &nbsp;|&nbsp; राम मंदिर</p>
+</footer>
+<div class="bottom-border"></div>
+
+</body>
+</html>
